@@ -1,1 +1,20 @@
-<h1>CONTACT</h1>
+      <h1>LOREM DOLOR ISMIT CRAVIA</h1>
+
+    <div id="explode-demo-1">
+      <button class="btn btn-success" {{action "toggleDetail"}}>Toggle Detail</button>
+      {{#liquid-if showDetail}}
+        <div class="details"> 
+          <h3>Details</h3>
+          <p>
+            Bacon ipsum dolor amet shank pork belly boudin flank
+            prosciutto alcatra andouille pig short ribs biltong kevin
+            salami tail turkey beef ribs.
+          </p>
+        </div>
+      {{else}}
+        <div class="overview">
+          <h3>Welcome</h3>
+          <p>This is the overview.</p>
+        </div>
+      {{/liquid-if}}
+    </div>
