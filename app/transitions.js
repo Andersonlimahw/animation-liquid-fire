@@ -1,20 +1,24 @@
 // refernce,  http://ember-animation.github.io/liquid-fire/
 
-export default function(){
+export default function(transition){
+ 
+//  set a default transition 
+  this.transition (
+    this.use('scale'),
+    this.reverse('fade')
+  );
+
+// The text below is the example to specify the effect for a specific route
+
   this.transition(
     this.fromRoute('home'),
     this.toRoute('jobs'),
-    this.use('scale'),
+    this.use('fade'),
     this.reverse('fade')
   );
 
-  this.transition(
-    this.fromRoute('jobs'),
-    this.toRoute('contact'),
-    this.use('scale'),
-    this.reverse('fade')
-  );
-
+  
+  
   //  transition delay
   this.transition(
     this.hasClass('wait-demo'),

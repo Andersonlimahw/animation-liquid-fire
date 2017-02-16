@@ -7,6 +7,7 @@ export default Ember.Controller.extend({
   crossFade: false,
   explode: false,
   wait: false,
+  transitionPage: true,
 
   actions: {
     toggleAnimation(animation){
