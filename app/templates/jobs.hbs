@@ -1,18 +1,22 @@
      
       <div class="row ">
         <div class="col-md-4">
-          <h2>Lorem</h2>
+          <h2>Emberjs</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           {{#bs-button class="btn btn-danger" onClick=(action (mut modal1) true)}} View details &raquo; {{/bs-button}}
         </div>
         <div class="col-md-4">
-          <h2>Ipsum</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <h2>Bootstrap</h2>
+           <p class="text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est deserunt voluptatem aliquam nostrum ipsam, enim facere nulla eligendi explicabo nihil doloribus totam temporibus cupiditate eum qui asperiores, aperiam, inventore non.
+          </p>
           {{#bs-button class="btn btn-warning" onClick=(action (mut modal2) true)}} View details &raquo; {{/bs-button}}
        </div>
         <div class="col-md-4">
-          <h2>Dolor</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <h2>Java</h2>
+          <p class="text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est deserunt voluptatem aliquam nostrum ipsam, enim facere nulla eligendi explicabo nihil doloribus totam temporibus cupiditate eum qui asperiores, aperiam, inventore non.
+          </p>
           {{#bs-button class="btn btn-success" onClick=(action (mut modal3) true)}} View details &raquo; {{/bs-button}}
         </div>
       </div>
@@ -26,16 +30,21 @@
         as |modal|}}
 
           {{#modal.header}}
-              <h4 class="modal-title">Example Modal  - with ember-bootstrap  </h4>
+              <h4 class="modal-title">EMBERJS </h4>
           {{/modal.header}}
-          {{#modal.body}}
-              <h3> Example</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reiciendis possimus vel beatae error ipsa dicta modi, veritatis
-                iure. Nemo, at.
-              </p>
-          {{/modal.body}}
+            {{#modal.body}}
+              <div class="container-fluid">
+                <div class="col-sm-6">
+                  <h3> Lorem</h3>
+                  <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ipsam, dignissimos saepe, labore unde necessitatibus esse natus amet illo laboriosam, consequatur sit pariatur nisi quos, velit eligendi nobis doloribus! Soluta, beatae labore quaerat sequi repudiandae.
+                  </p>
+                </div>
+                <div class="col-sm-6">
+                  <img src="http://www.gravatar.com/avatar/0cf15665a9146ba852bf042b0652780a?s=200" alt="Ember logo" class="img-responsive">
+                </div>
+              </div>              
+            {{/modal.body}}
           {{#modal.footer}}
               {{#bs-button 
                 class="btn btn-danger"
@@ -51,16 +60,21 @@
         as |modal|}}
 
           {{#modal.header}}
-              <h4 class="modal-title">Example Modal  - with ember-bootstrap  </h4>
+              <h4 class="modal-title">Bootstrap  </h4>
           {{/modal.header}}
-          {{#modal.body}}
-              <h3> Example</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reiciendis possimus vel beatae error ipsa dicta modi, veritatis
-                iure. Nemo, at.
-              </p>
-          {{/modal.body}}
+            {{#modal.body}}
+              <div class="container-fluid">
+                <div class="col-sm-6">
+                  <h3> Lorem</h3>
+                    <p class="text-justify">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est deserunt voluptatem aliquam nostrum ipsam, enim facere nulla eligendi explicabo nihil doloribus totam temporibus cupiditate eum qui asperiores, aperiam, inventore non.
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                  <img src="https://avatars3.githubusercontent.com/u/2918581?v=3&s=200" alt="Bootstrap logo" class="img-responsive">
+                </div>
+              </div>             
+            {{/modal.body}}
           {{#modal.footer}}
               {{#bs-button 
                 class="btn btn-danger"
@@ -77,16 +91,21 @@
         as |modal|}}
 
           {{#modal.header}}
-              <h4 class="modal-title">Example Modal  - with ember-bootstrap  </h4>
+              <h4 class="modal-title">Java  </h4>
           {{/modal.header}}
-          {{#modal.body}}
-              <h3> Example</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reiciendis possimus vel beatae error ipsa dicta modi, veritatis
-                iure. Nemo, at.
-              </p>
-          {{/modal.body}}
+             {{#modal.body}}
+              <div class="container-fluid">
+                <div class="col-sm-6">
+                  <h3> Example</h3>
+                  <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ipsam, dignissimos saepe, labore unde necessitatibus esse natus amet illo laboriosam, consequatur sit pariatur nisi quos, velit eligendi nobis doloribus! Soluta, beatae labore quaerat sequi repudiandae.
+                  </p>
+                </div>
+                <div class="col-sm-6">
+                  <img src="http://www.edm2.com/images/thumb/6/6a/Java-logo.jpg/200px-Java-logo.jpg" alt="Java Logo" class="img-responsive">
+                </div>
+              </div>             
+            {{/modal.body}}
           {{#modal.footer}}
               {{#bs-button 
                 class="btn btn-danger"
