@@ -1,35 +1,61 @@
+// refernce,  http://ember-animation.github.io/liquid-fire/
+
 export default function(){
   this.transition(
     this.fromRoute('home'),
     this.toRoute('jobs'),
-    this.use('toLeft'),
-    this.reverse('toRight')
+    this.use('scale'),
+    this.reverse('fade')
   );
 
   this.transition(
     this.fromRoute('jobs'),
     this.toRoute('contact'),
-    this.use('toLeft'),
-    this.reverse('toRight')
+    this.use('scale'),
+    this.reverse('fade')
   );
 
   //  transition delay
-   this.transition(
+  this.transition(
     this.hasClass('wait-demo'),
     this.use('wait', 1000, { then: 'fade' })
   );
 
+  //  to se a default transition use , the block below. using this.toValue(true);
 
-
+  // this.transition(
+  //   this.toValue(true),
+  //   this.use('scale', { duration: 500 }),
+  //   this.reverse('toUp', { duration: 500 })
+  // );
+  
   this.transition(
-    this.toValue(true),
+    this.childOf('.animate-scale'),
     this.use('scale', { duration: 500 }),
     this.reverse('toUp', { duration: 500 })
   );
 
+   this.transition(
+    this.childOf('.animate-fade'),
+    this.use('fade', { duration: 500 }),
+    this.reverse('toUp', { duration: 500 })
+  );
+
+  this.transition(
+    this.childOf('.animate-crossFade'),
+    this.use('crossFade', { duration: 1000 }),
+    this.reverse('toLeft', { duration: 1000 })
+  );
+
+
+  this.transition(
+    this.childOf('.animate-wait'),
+    this.use('wait', 500, { then: 'fade' })
+  );
+
   let duration = 2000;
   this.transition(
-    this.childOf('#explode-demo-1'),
+    this.childOf('.explode-demo-1'),
     this.use('explode', {
       pickOld: 'h3',                // Find an "h3" in the old template. This
                                     // can be any CSS selector.
