@@ -3,41 +3,98 @@
         <div class="col-md-4">
           <h2>Lorem</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-info"  data-toggle="modal" data-target="#myModal"  role="button" {{action "toggleModal"}}>View details &raquo;</a></p>
+          {{#bs-button class="btn btn-danger" onClick=(action (mut modal1) true)}} View details &raquo; {{/bs-button}}
         </div>
         <div class="col-md-4">
           <h2>Ipsum</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-danger" href="#" role="button">View details &raquo;</a></p>
+          {{#bs-button class="btn btn-warning" onClick=(action (mut modal2) true)}} View details &raquo; {{/bs-button}}
        </div>
         <div class="col-md-4">
           <h2>Dolor</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-success" href="#" role="button">View details &raquo;</a></p>
+          {{#bs-button class="btn btn-success" onClick=(action (mut modal3) true)}} View details &raquo; {{/bs-button}}
         </div>
       </div>
 
       <hr>
 
-     {{#if isWormholeEnabled}}
-        {{#ember-wormhole to="main-container" renderInPlace="false"}}
-          <div class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title">Modal title</h4>
-                </div>
-                <div class="modal-body">
-                  <p>One fine body&hellip;</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div> 
-            </div> 
-          </div> 
-        {{/ember-wormhole}}
-     {{/if}}
 
+      {{#bs-modal 
+        open=modal1  
+        onHidden=(action (mut modal1)false)
+        as |modal|}}
+
+          {{#modal.header}}
+              <h4 class="modal-title">Example Modal  - with ember-bootstrap  </h4>
+          {{/modal.header}}
+          {{#modal.body}}
+              <h3> Example</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Reiciendis possimus vel beatae error ipsa dicta modi, veritatis
+                iure. Nemo, at.
+              </p>
+          {{/modal.body}}
+          {{#modal.footer}}
+              {{#bs-button 
+                class="btn btn-danger"
+                onClick=(action modal.close)}}
+                Close
+              {{/bs-button}}        
+          {{/modal.footer}}
+      {{/bs-modal}}
+
+      {{#bs-modal 
+        open=modal2  
+        onHidden=(action (mut modal2)false)
+        as |modal|}}
+
+          {{#modal.header}}
+              <h4 class="modal-title">Example Modal  - with ember-bootstrap  </h4>
+          {{/modal.header}}
+          {{#modal.body}}
+              <h3> Example</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Reiciendis possimus vel beatae error ipsa dicta modi, veritatis
+                iure. Nemo, at.
+              </p>
+          {{/modal.body}}
+          {{#modal.footer}}
+              {{#bs-button 
+                class="btn btn-danger"
+                onClick=(action modal.close)}}
+                Close
+              {{/bs-button}}        
+          {{/modal.footer}}
+      {{/bs-modal}}
+
+
+      {{#bs-modal 
+        open=modal3  
+        onHidden=(action (mut modal3)false)
+        as |modal|}}
+
+          {{#modal.header}}
+              <h4 class="modal-title">Example Modal  - with ember-bootstrap  </h4>
+          {{/modal.header}}
+          {{#modal.body}}
+              <h3> Example</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Reiciendis possimus vel beatae error ipsa dicta modi, veritatis
+                iure. Nemo, at.
+              </p>
+          {{/modal.body}}
+          {{#modal.footer}}
+              {{#bs-button 
+                class="btn btn-danger"
+                onClick=(action modal.close)}}
+                Close
+              {{/bs-button}}        
+          {{/modal.footer}}
+      {{/bs-modal}}
+
+
+      
