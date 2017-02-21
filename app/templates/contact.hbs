@@ -1,20 +1,129 @@
-      <h1>LOREM DOLOR ISMIT CRAVIA</h1>
+      
 
-    <div class="explode-demo-1">
-      <button class="btn btn-success" {{action "toggleDetail"}}>Toggle Detail</button>
-      {{#liquid-if showDetail}}
-        <div class="details"> 
-          <h3>Details</h3>
-          <p>
-            Bacon ipsum dolor amet shank pork belly boudin flank
-            prosciutto alcatra andouille pig short ribs biltong kevin
-            salami tail turkey beef ribs.
-          </p>
-        </div>
-      {{else}}
-        <div class="overview">
-          <h3>Welcome</h3>
-          <p>This is the overview.</p>
-        </div>
-      {{/liquid-if}}
+
+    <h1>ANIMATIONS WITH PURE .CSS <small> no needs liquid fire </small></h1>
+    
+    
+    
+    <div class="col-md-4">
+      <button type="button" class="btn btn-success" {{action "toggleAnimation" "panel"}}>Bounce and Slide</button>
+
+      {{#if panel}}
+        <div class="panel panel-default animated bounceInUp ">
+            <div class="panel-body">
+              Bounce
+            </div>
+          </div>
+        {{else}}
+          <div class="panel panel-default animated slideInUp ">
+            <div class="panel-body">
+              slideInUp
+            </div>
+          </div>
+      {{/if}}
     </div>
+
+        
+    <div class="col-md-4">
+      <button type="button" class="btn btn-success" {{action "toggleAnimation" "myVar"}}>ZoomIn and Left</button>
+
+      {{#if myVar}}
+        <div class="panel panel-default animated zoomIn ">
+            <div class="panel-body">
+              ZoomIn
+            </div>
+          </div>
+        {{else}}
+          <div class="panel panel-default animated zoomInLeft ">
+            <div class="panel-body">
+              ZoomIn Left
+            </div>
+          </div>
+      {{/if}}
+    </div>
+
+    <div class="col-md-4">
+      <button type="button" class="btn btn-success" {{action "toggleAnimation" "flip"}}>Flip X Y</button>
+
+      {{#if flip}}
+        <div class="panel panel-default animated flipInX ">
+            <div class="panel-body">
+              Flip in x
+            </div>
+          </div>
+        {{else}}
+          <div class="panel panel-default animated flipInY ">
+            <div class="panel-body">
+              Flip in y 
+            </div>
+          </div>
+      {{/if}}
+    </div>
+    
+    <div class="col-md-12">
+      
+      <button type="button" class="btn btn-success" {{action "toggleAnimation" "carousel"}}>Carousel</button>
+      
+    </div>
+
+    <div class="col-md-12">
+
+    
+    {{#if carousel}}
+        
+        <div id="animatedCarousel" class="carousel slide animated" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+                <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+                <li data-target="#carousel-id" data-slide-to="2" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active animated slideInUp">
+                    <img src="http://placehold.it/1920x960/cc0000/fff" alt="" class="img-responsive">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item animated slideInDown">
+                    
+                    <img src="http://placehold.it/1920x960/ccc/000" alt="" class="img-responsive">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Another example headline.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item animated flipInX">
+                    <img src="http://placehold.it/1920x960/000/fff" alt="" class="img-responsive">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>One more for good measure.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#animatedCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" href="#animatedCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+        
+     {{else}}
+          <div class="animated flipInX">          
+             <img src="http://wallpapersin4k.net/wp-content/uploads/2016/12/Darth-Vader-Wallpapers-5.jpeg" alt="" class="img-responsive ">
+              <div class="container ">
+                <div class="carousel-caption">
+                  <h1>One more for good measure.</h1>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p><a class="btn btn-lg btn-danger" href="#" role="button">The Dark Side</a></p>
+                </div>
+              </div>
+            </div>
+    {{/if}}
+    
+  </div>

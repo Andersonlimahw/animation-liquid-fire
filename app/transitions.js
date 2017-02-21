@@ -1,8 +1,8 @@
 // refernce,  http://ember-animation.github.io/liquid-fire/
 
-export default function(transition){
- 
-//  set a default transition 
+export default function(){
+
+//  set a default transition
   this.transition (
     this.use('scale'),
     this.reverse('fade')
@@ -17,8 +17,8 @@ export default function(transition){
     this.reverse('fade')
   );
 
-  
-  
+
+
   //  transition delay
   this.transition(
     this.hasClass('wait-demo'),
@@ -32,7 +32,7 @@ export default function(transition){
   //   this.use('scale', { duration: 500 }),
   //   this.reverse('toUp', { duration: 500 })
   // );
-  
+
   this.transition(
     this.childOf('.animate-scale'),
     this.use('scale', { duration: 500 }),
@@ -81,6 +81,6 @@ export default function(transition){
       use: ['fade', {duration: duration / 2}]
     })
   );
-  
+
 
 }

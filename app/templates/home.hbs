@@ -1,5 +1,5 @@
 
-    
+
     <div class="jumbotron">
       <div class="container">
         <h1>Animations with ember-liquid-fire</h1>
@@ -8,8 +8,8 @@
         <p><a class="btn btn-danger btn-lg" href="http://ember-animation.github.io/liquid-fire" target="_blank" role="button">See the Doc</a></p>
       </div>
     </div>
-    
-    
+
+
     <div class="animate-scale"> 
         <button type="button" name="button" class="btn btn-primary" {{action 'toggleAnimation' 'scale'}} >
           Scale
@@ -20,13 +20,13 @@
           <div class="container">
             <h1>I'm using Scale efect </h1>
              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quis repellendus repudiandae explicabo quibusdam, officia ducimus consequuntur fugiat voluptate vitae, optio magni cum pariatur velit, tempore tempora veniam incidunt quia nisi blanditiis! Illo quas laboriosam, tenetur cumque at labore voluptatibus.</p>
-            
+
           </div>
         </div>
         {{/liquid-if}}
     </div>
 
-    <div class="animate-fade">    
+    <div class="animate-fade">
         <button type="button" name="button" class="btn btn-primary" {{action 'toggleAnimation' 'fade'}} >
           Fade
         </button>
@@ -36,13 +36,13 @@
           <div class="container">
             <h1>I'm using Fade efect </h1>
              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quis repellendus repudiandae explicabo quibusdam, officia ducimus consequuntur fugiat voluptate vitae, optio magni cum pariatur velit, tempore tempora veniam incidunt quia nisi blanditiis! Illo quas laboriosam, tenetur cumque at labore voluptatibus.</p>
-            
+
           </div>
         </div>
         {{/liquid-if}}
    </div>
 
-   <div class="animate-crossFade">    
+   <div class="animate-crossFade">
         <button type="button" name="button" class="btn btn-primary" {{action 'toggleAnimation' 'crossFade'}} >
           crossFade
         </button>
@@ -52,7 +52,7 @@
           <div class="container">
             <h1>I'm using crossFade efect too </h1>
              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quis repellendus repudiandae explicabo quibusdam, officia ducimus consequuntur fugiat voluptate vitae, optio magni cum pariatur velit, tempore tempora veniam incidunt quia nisi blanditiis! Illo quas laboriosam, tenetur cumque at labore voluptatibus.</p>
-            
+
           </div>
         </div>
         {{else}}
@@ -60,13 +60,13 @@
             <div class="container">
               <h1>I'm using crossFade efect</h1>
               <p> <b> CROSSED </b> si a templato rof a simple programming or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-              
+
             </div>
           </div>
         {{/liquid-if}}
    </div>
-  
-   <div class="animate-wait">    
+
+   <div class="animate-wait">
         <button type="button" name="button" class="btn btn-primary" {{action 'toggleAnimation' 'wait'}} >
         Wait
         </button>
@@ -76,11 +76,29 @@
             <div class="container">
               <h1>I'm using Wait efect </h1>
                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quis repellendus repudiandae explicabo quibusdam, officia ducimus consequuntur fugiat voluptate vitae, optio magni cum pariatur velit, tempore tempora veniam incidunt quia nisi blanditiis! Illo quas laboriosam, tenetur cumque at labore voluptatibus.</p>
-              
+
             </div>
           </div>
         {{/liquid-if}}
    </div>
 
 
+    <div class="explode-demo-1">
+      <button class="btn btn-primary" {{action "toggleAnimation" "showDetail" }}>Toggle Detail</button>
+      {{#liquid-if showDetail}}
+        <div class="details"> 
+          <h3>Details</h3>
+          <p>
+            Bacon ipsum dolor amet shank pork belly boudin flank
+            prosciutto alcatra andouille pig short ribs biltong kevin
+            salami tail turkey beef ribs.
+          </p>
+        </div>
+      {{else}}
+        <div class="overview">
+          <h3>Welcome</h3>
+          <p>This is the overview.</p>
+        </div>
+      {{/liquid-if}}
+    </div>
 

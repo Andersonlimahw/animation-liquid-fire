@@ -3,9 +3,14 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   showDetail: false,
+  panel: false,
+  myVar: false,
+  flip: false,
+  carousel: false,
+
   actions: {
-    toggleDetail(){
-       this.toggleProperty('showDetail');
+    toggleAnimation(animation){
+       this.toggleProperty(animation);
     }
   }
 });

@@ -1,31 +1,37 @@
-     
+
+
+      
+          <h1>NATIVE BOOTSTRAP-MODAL , DON'T OWRK WITH LIQUID-FIRE !</h1>
+          <h3 class="text-warning"> ! YOU NEED TO INSTALL EMBER-BOOSTRAP , AND USE  #BS-MODAL </h3>
+      
       <div class="row ">
         <div class="col-md-4">
           <h2>Emberjs</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          {{#bs-button class="btn btn-danger" onClick=(action (mut modal1) true)}} View details &raquo; {{/bs-button}}
+          {{#bs-button class="btn btn-danger" onClick=(action (mut modal1) true)}} open Modal &raquo; {{/bs-button}}
         </div>
         <div class="col-md-4">
           <h2>Bootstrap</h2>
            <p class="text-justify">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est deserunt voluptatem aliquam nostrum ipsam, enim facere nulla eligendi explicabo nihil doloribus totam temporibus cupiditate eum qui asperiores, aperiam, inventore non.
           </p>
-          {{#bs-button class="btn btn-warning" onClick=(action (mut modal2) true)}} View details &raquo; {{/bs-button}}
+
+          {{#bs-button class="btn btn-warning" onClick=(action (mut modal2) true)}} Open Modal &raquo; {{/bs-button}}
        </div>
         <div class="col-md-4">
           <h2>Java</h2>
           <p class="text-justify">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est deserunt voluptatem aliquam nostrum ipsam, enim facere nulla eligendi explicabo nihil doloribus totam temporibus cupiditate eum qui asperiores, aperiam, inventore non.
           </p>
-          {{#bs-button class="btn btn-success" onClick=(action (mut modal3) true)}} View details &raquo; {{/bs-button}}
+          {{#bs-button class="btn btn-success" onClick=(action (mut modal3) true)}} Open Modal &raquo; {{/bs-button}}
         </div>
       </div>
 
       <hr>
 
 
-      {{#bs-modal 
-        open=modal1  
+      {{#bs-modal
+        open=modal1
         onHidden=(action (mut modal1)false)
         as |modal|}}
 
@@ -33,7 +39,7 @@
               <h4 class="modal-title">EMBERJS </h4>
           {{/modal.header}}
             {{#modal.body}}
-              <div class="container-fluid">
+              <div class="container-fluid animated flipInX">
                 <div class="col-sm-6">
                   <h3> Lorem</h3>
                   <p class="text-justify">
@@ -43,19 +49,19 @@
                 <div class="col-sm-6">
                   <img src="http://www.gravatar.com/avatar/0cf15665a9146ba852bf042b0652780a?s=200" alt="Ember logo" class="img-responsive">
                 </div>
-              </div>              
+              </div>
             {{/modal.body}}
           {{#modal.footer}}
-              {{#bs-button 
-                class="btn btn-danger"
+              {{#bs-button
+                class="btn btn-danger animated pulse"
                 onClick=(action modal.close)}}
                 Close
-              {{/bs-button}}        
+              {{/bs-button}}
           {{/modal.footer}}
       {{/bs-modal}}
 
-      {{#bs-modal 
-        open=modal2  
+      {{#bs-modal
+        open=modal2
         onHidden=(action (mut modal2)false)
         as |modal|}}
 
@@ -63,7 +69,7 @@
               <h4 class="modal-title">Bootstrap  </h4>
           {{/modal.header}}
             {{#modal.body}}
-              <div class="container-fluid">
+              <div class="container-fluid animated bounce">
                 <div class="col-sm-6">
                   <h3> Lorem</h3>
                     <p class="text-justify">
@@ -73,20 +79,20 @@
                 <div class="col-sm-6">
                   <img src="https://avatars3.githubusercontent.com/u/2918581?v=3&s=200" alt="Bootstrap logo" class="img-responsive">
                 </div>
-              </div>             
+              </div>
             {{/modal.body}}
           {{#modal.footer}}
-              {{#bs-button 
-                class="btn btn-danger"
+              {{#bs-button
+                class="btn btn-danger animated pulse"
                 onClick=(action modal.close)}}
                 Close
-              {{/bs-button}}        
+              {{/bs-button}}
           {{/modal.footer}}
       {{/bs-modal}}
 
 
-      {{#bs-modal 
-        open=modal3  
+      {{#bs-modal
+        open=modal3
         onHidden=(action (mut modal3)false)
         as |modal|}}
 
@@ -94,26 +100,23 @@
               <h4 class="modal-title">Java  </h4>
           {{/modal.header}}
              {{#modal.body}}
-              <div class="container-fluid">
-                <div class="col-sm-6">
+              <div class="container-fluid animated zoomIn">
+                <div class="col-sm-6 ">
                   <h3> Example</h3>
                   <p class="text-justify">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ipsam, dignissimos saepe, labore unde necessitatibus esse natus amet illo laboriosam, consequatur sit pariatur nisi quos, velit eligendi nobis doloribus! Soluta, beatae labore quaerat sequi repudiandae.
                   </p>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 ">
                   <img src="http://www.edm2.com/images/thumb/6/6a/Java-logo.jpg/200px-Java-logo.jpg" alt="Java Logo" class="img-responsive">
                 </div>
-              </div>             
+              </div>
             {{/modal.body}}
           {{#modal.footer}}
-              {{#bs-button 
-                class="btn btn-danger"
+              {{#bs-button
+                class="btn btn-danger animated pulse"
                 onClick=(action modal.close)}}
                 Close
-              {{/bs-button}}        
+              {{/bs-button}}
           {{/modal.footer}}
       {{/bs-modal}}
-
-
-      

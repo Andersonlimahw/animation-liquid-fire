@@ -8,11 +8,12 @@ export default Ember.Controller.extend({
   explode: false,
   wait: false,
   transitionPage: true,
+  showDetail: false,
 
   actions: {
     toggleAnimation(animation){
       this.toggleProperty(animation);
-    }, 
+    },
 
   }
 });
